@@ -28,7 +28,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Configure Postgres database based on connection string of the libpq Keyword/Value form
 # https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING
-conn_str = 'dbname=researchpostgres host=researchpostgres.postgres.database.azure.com port=5432 sslmode=require user=postgres password=@M5WR67iP&zvzo'
+conn_str = 'dbname=postgres host=researchpostgres.postgres.database.azure.com port=5432 sslmode=require user=postgres password=@M5WR67iP&zvzo'
 conn_str_params = {pair.split('=')[0]: pair.split('=')[1] for pair in conn_str.split(' ')}
 DATABASES = {
     'default': {
