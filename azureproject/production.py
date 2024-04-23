@@ -39,6 +39,8 @@ DATABASES = {
         'PASSWORD': conn_str_params['password'],
     }
 }
+from pprint import pprint
+pprint(DATABASES)
 
 CACHES = {
         "default": {  
