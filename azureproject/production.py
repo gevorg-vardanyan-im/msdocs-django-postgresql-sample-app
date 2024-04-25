@@ -1,4 +1,6 @@
 import os
+from pprint import pprint
+
 
 from .settings import *  # noqa
 from .settings import BASE_DIR
@@ -8,6 +10,9 @@ from .settings import BASE_DIR
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 DEBUG = True
+print(f'\n{DEBUG = }')
+print(f'\n{ALLOWED_HOSTS = }')
+print(f'\n{CSRF_TRUSTED_ORIGINS = }')
 
 # WhiteNoise configuration
 MIDDLEWARE = [
@@ -39,7 +44,6 @@ DATABASES = {
         'PASSWORD': conn_str_params['password'],
     }
 }
-from pprint import pprint
 pprint(DATABASES)
 
 CACHES = {
