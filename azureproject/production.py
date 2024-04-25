@@ -10,7 +10,7 @@ from .settings import BASE_DIR
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'], 'http://' + os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 DEBUG = True
-SECRET_KEY = 'ae3b7d0ae6e707fcc9d94099f004cb4dc5e4470f07ce866d8f9fa671ba45107e'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 print(f'\n{DEBUG = }')
 print(f'\n{SECRET_KEY = }')
